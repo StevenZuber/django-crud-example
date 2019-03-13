@@ -16,4 +16,3 @@ class Avenger(models.Model):
     def __str__(self):
         return self.avenger_name
 
-    
