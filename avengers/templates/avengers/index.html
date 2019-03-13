@@ -1,0 +1,11 @@
+{% if avenger_list %}
+    <ul>
+        {% for avenger in avenger_list %}
+        <li>
+            <a href="{% url 'avengers:detail' avenger.avenger_name %}">{{avenger.avenger_name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Avengers available</p>
+{% endif %}

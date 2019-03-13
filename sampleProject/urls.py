@@ -24,5 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('helloworld/', hello_world),
     path('', root_page),
-    path('avengers', include('demoAPI.urls'))
+    path('avengers', include('avengers.urls'))
 ]
