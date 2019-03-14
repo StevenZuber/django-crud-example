@@ -7,5 +7,5 @@ app_name = 'avengers'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('(<avenger_name>)', views.detail, name='detail'),
+    path('/<avenger_name>', views.detail, name='detail'),
 ]
