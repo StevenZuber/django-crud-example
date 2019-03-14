@@ -1,7 +1,9 @@
+{% if error_message %}
+<p><strong>{{error_message}}</strong></p>
+{% endif %}
+
 <h1>{{ avenger.avenger_name }}</h1>
 <p>Was added on {{ avenger.add_date }}</p>
 <h2>{{ avenger.avenger_name }} has {{ avenger.referrals }} referrals!</h2>
 
-{% if error_message %}
-<p><strong>{{error_message}}</strong></p>
-{% endif %}
+

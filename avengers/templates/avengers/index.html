@@ -1,11 +1,30 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'avengers/style.css' %}" />
+
+
 {% if avenger_list %}
-    <ul>
-        {% for avenger in avenger_list %}
-        <li>
-            <a href="{% url 'avengers:detail' avenger.avenger_name %}">{{ avenger.avenger_name }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+<table id="avengers">
+    <thead>
+    <tr>
+        <th>Avenger</th>
+        <th>Clicks</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for avenger in avenger_list %}
+    <tr>
+        <td>{{ avenger.avenger_name }}</td>
+        <td>{{ avenger.referrals }}</td>
+        <td><a href="{% url 'avengers:detail' avenger.avenger_name %}">Edit</a></td>
+        <td>Delete</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {% else %}
-    <p>No Avengers available</p>
+<p>No Avengers available</p>
 {% endif %}
+
