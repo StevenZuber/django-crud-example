@@ -1,6 +1,6 @@
 div.content{
-  padding-left:15%;
-  padding-right:15%;
+  padding:25%;
+  padding-right:25%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -8,7 +8,7 @@ div.content{
 #avengers {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 70%;
+  width: 60%;
 }
 
 #avengers td, #avengers th {
@@ -21,10 +21,11 @@ div.content{
 #avengers tr:hover {background-color: #ddd;}
 
 #avengers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   text-align: left;
-  background-color: RED;
+  background-color: #AAAAAA;
   color: white;
+  width: 60%
 }
 
