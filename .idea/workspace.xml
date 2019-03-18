@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f13e0b80-65e2-440c-99ea-894418373645" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sampleprojecttemp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sampleprojecttemp/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sampleprojecttemp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sampleprojecttemp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sampleprojecttemp/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampleProject/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampleProject/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampleProject/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampleProject/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampleProject/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/avengers/static/avengers/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -62,12 +51,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="320">
-                <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+              <first_editor>
+                <caret column="2" selection-start-column="2" selection-end-column="2" />
               </first_editor>
               <second_editor />
             </state>
@@ -111,10 +100,10 @@
         <option value="$PROJECT_DIR$/avengers/templates/avengers/index.html" />
         <option value="$PROJECT_DIR$/avengers/models.py" />
         <option value="$PROJECT_DIR$/avengers/urls.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/avengers/views.py" />
         <option value="$PROJECT_DIR$/avengers/templates/avengers/detail.html" />
         <option value="$PROJECT_DIR$/avengers/static/avengers/style.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -171,7 +160,7 @@
             <path>
               <item name="sampleAPI" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonDjangoDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="sampleprojecttemp" type="462c0819:PsiDirectoryNode" />
+              <item name="sampleproject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,7 +229,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23067915" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23067915" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -272,7 +261,7 @@
     <entry file="file://$PROJECT_DIR$/avengers/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sampleprojecttemp/views.py">
+    <entry file="file://$PROJECT_DIR$/sampleproject/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
@@ -290,7 +279,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sampleprojecttemp/settings.py">
+    <entry file="file://$PROJECT_DIR$/sampleproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="22" />
@@ -382,7 +371,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sampleprojecttemp/urls.py">
+    <entry file="file://$PROJECT_DIR$/sampleproject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
@@ -418,16 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="320">
-            <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/avengers/templates/avengers/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -439,6 +418,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor>
+            <caret column="2" selection-start-column="2" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
