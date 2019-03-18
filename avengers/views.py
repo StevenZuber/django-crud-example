@@ -44,11 +44,7 @@ def delete(request, id):
 
     if request.method == 'POST':
         avenger.delete()
-        avenger_list = Avenger.objects.all()
 
-        new_context = {
-            'avenger_list': avenger_list,
-        }
         return redirect('/avengers/')
 
     avenger_list = Avenger.objects.all()
@@ -70,28 +66,3 @@ def update(request, id):
             return redirect('/avengers/')
     else:
         return redirect('/avengers/')
-
-
-# def create(request):
-#
-#     if request.method == 'POST':
-#         form = AvengerForm(request.POST)
-#
-#         if form.is_valid():
-#             avenger = form.save(commit=False)
-#             avenger.save()
-#             # avenger_list = Avenger.objects.all()
-#             #
-#             # context = {
-#             #     'avenger_list': avenger_list,
-#             # }
-#             return redirect('avengers/detail.html', {'avenger': avenger})
-#
-#     else:
-#         avenger_list = Avenger.objects.all()
-#
-#         context = {
-#             'avenger_list': avenger_list,
-#         }
-#         return render(request, 'avengers/index.html', context)
-

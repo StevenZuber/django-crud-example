@@ -1,4 +1,4 @@
-# Currently a WIP
+#Python CRUD Application with Django 
 
 ##Description
 
@@ -11,13 +11,16 @@ should also be able to update and delete each Avenger in the list.
 - This is a full stack application, but the frontend is fairly simple, with no JavaScripts and only
 basic CSS
 
-##Technical Choices and Architecture 
-<!--
--	Reasoning behind your technical choices, including architecture.
--	Trade-offs you might have made, anything you left out, or what you might do differently if you were to spend additional time on the project.
--->
 
-# Running the Applications
+##Resources Used
+I leaned heavily on the tutorial videos from Derek Banas on Youtube to get my head around
+what I was doing with setting up a Django project.
+https://www.youtube.com/playlist?list=PLGLfVvz_LVvSMqZiTTsAC7C8Ypp81Jt6D
+
+I also looked at the resource Django Girls to complete working on the update/add functionality. 
+https://tutorial.djangogirls.org/en/django_forms/
+
+##Running the Application Locally
 
 Make sure you have the latest version of Django installed
 
@@ -30,5 +33,6 @@ Then run the server:
 
     ./manage.py runserver
 
-## I will deploy this on Heroku and add a link to the app when it's finished
+##Heroku
+
 
