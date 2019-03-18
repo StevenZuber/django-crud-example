@@ -1,4 +1,4 @@
-Django==2.1.5
+Django==2.1.7
 django-heroku
 gunicorn==19.9.0
 
