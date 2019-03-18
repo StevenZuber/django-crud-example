@@ -5,13 +5,6 @@ from .forms import AvengerForm
 
 def index(request):
 
-    # if request.method == 'GET':
-    #     avenger_list = Avenger.objects.all()
-    #
-    #     context = {
-    #         'avenger_list': avenger_list,
-    #     }
-
     # allows user to add to the roster without having to load a separate page
     if request.method == 'POST':
         form = AvengerForm(request.POST)
@@ -34,8 +27,6 @@ def index(request):
             'avenger_list': avenger_list,
         }
         return render(request, 'avengers/index.html', context)
-
-    # return render(request, 'avengers/index.html', context)
 
 
 def detail(request, avenger_name):
@@ -69,7 +60,16 @@ def delete(request, id):
 
 
 def update(request, id):
-    return"temp"
+    avenger = get_object_or_404(Avenger, id=id)
+    if request.method == "POST":
+        form = AvengerForm(request.POST, instance=avenger)
+        if form.is_valid():
+            avenger = form.save(commit=False)
+            avenger.save()
+
+            return redirect('/avengers/')
+    else:
+        return redirect('/avengers/')
 
 
 # def create(request):

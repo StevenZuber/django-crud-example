@@ -1,9 +1,19 @@
-{% if error_message %}
-<p><strong>{{error_message}}</strong></p>
-{% endif %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'avengers/style.css' %}" />
 
 <h1>{{ avenger.avenger_name }}</h1>
 <p>Was added on {{ avenger.add_date }}</p>
 <h2>{{ avenger.avenger_name }} has {{ avenger.referrals }} referrals!</h2>
+<br>
+<h3>Change {{ avenger.avenger_name }}'s name?</h3>
+{% block content %}
+<form method="POST" action="{% url 'avengers:update' avenger.id %}">
+    {% csrf_token %}
+    {{ form }}
+  <input type="text" name="avenger_name">
+    <input type="submit" value="Change Name" />
+</form>
+{% endblock %}
 
-<a href="{% url 'avengers:index' %}">Back</a>
+<a href="{% url 'avengers:index' %}">Back to the Bunker!</a>
