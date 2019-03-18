@@ -11,7 +11,7 @@ urlpatterns = [
     path('<avenger_name>', views.detail, name='detail'),
     path('delete/<int:id>', views.delete, name='delete'),
     path('update/<int:id>', views.update, name='update'),
-    path('', views.create, name='create'),
+    # path('', views.create, name='create'),
 ]
 
 # urlpatterns = [

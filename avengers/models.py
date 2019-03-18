@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+
+
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 
@@ -12,25 +15,26 @@ class Avenger(models.Model):
 
     referrals = models.IntegerField(default=0)
 
+    def create(self):
+        self.save()
 
     def __str__(self):
         return self.avenger_name
 
-    def get_index_url(self):
-        return ('avengers:index', [self.slug])
-
-    def get_absolute_url(self):
-        return ('avengers:index', [self.slug])
-
-    def get_update_url(self):
-        return ('avengers:update', [self.slug])
-
-    def get_delete_url(self):
-        return ('avengers:delete', [self.slug])
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.avenger_name)
-        super().save(*args, **kwargs)
-
-
+    # def get_index_url(self):
+    #     return ('avengers:index', [self.slug])
+    #
+    # def get_absolute_url(self):
+    #     return ('avengers:index', [self.slug])
+    #
+    # def get_update_url(self):
+    #     return ('avengers:update', [self.slug])
+    #
+    # def get_delete_url(self):
+    #     return ('avengers:delete', [self.slug])
+    #
+    # def save(self, *args, **kwargs):
+    #     self.slug = slugify(self.avenger_name)
+    #     super().save(*args, **kwargs)
+    #
 

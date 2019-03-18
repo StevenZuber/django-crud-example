@@ -4,12 +4,16 @@
 <div class="content">
 <h1>Welcome to the Avengers Bunker!</h1>
 <br>
-<form method="POST" ><h4>Add New Avenger to the roster?</h4>
+
+{% block content %}
+<h4>Add New Avenger to the roster?</h4>
+<form method="POST" action="{% url 'avengers:index' %}">
     {% csrf_token %}
-  <input type="text" name="create">
+    {{ form }}
+  <input type="text" name="avenger_name">
     <input type="submit" value="Add" />
 </form>
-
+{% endblock %}
 
 
 {% if avenger_list %}
@@ -28,7 +32,8 @@
         <td>{{ avenger.avenger_name }}</td>
         <td>{{ avenger.referrals }}</td>
         <td><a href="{% url 'avengers:detail' avenger.avenger_name %}">Edit</a></td>
-        <td><form method="POST" action="{% url 'avengers:delete' avenger.id %}">{% csrf_token %}<input type="submit" value="Delete"></form></td>
+        <td><form method="POST" action="{% url 'avengers:delete' avenger.id %}">{% csrf_token %}
+            <input type="submit" value="Delete"></form></td>
     </tr>
     {% endfor %}
     </tbody>

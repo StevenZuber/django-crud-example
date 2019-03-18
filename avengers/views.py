@@ -1,16 +1,40 @@
 from .models import Avenger
 from django.shortcuts import render, get_object_or_404, redirect
-from avengers.forms import AvengerForm
+from .forms import AvengerForm
 
 
 def index(request):
-    avenger_list = Avenger.objects.all()
 
-    context = {
-        'avenger_list': avenger_list,
-    }
+    if request.method == 'GET':
+        avenger_list = Avenger.objects.all()
+
+        context = {
+            'avenger_list': avenger_list,
+        }
+    if request.method == 'POST':
+        form = AvengerForm(request.POST)
+
+        if form.is_valid():
+            avenger = form.save(commit=False)
+            avenger.save()
+
+            avenger_list = Avenger.objects.all()
+            context = {
+                'avenger_list': avenger_list,
+            }
+
+            return render(request, 'avengers/index.html', context)
+
+    else:
+        avenger_list = Avenger.objects.all()
+
+        context = {
+            'avenger_list': avenger_list,
+        }
+        return render(request, 'avengers/index.html', context)
 
     return render(request, 'avengers/index.html', context)
+
 
 
 def detail(request, avenger_name):
@@ -47,30 +71,28 @@ def update(request, id):
     return"temp"
 
 
-def create(request):
-
-    if request.method == 'POST':
-        form = AvengerForm(request.POST or None)
-
-        if form.is_valid():
-            avenger = form.save()
-            form.save()
-            avenger.save()
-            avenger_list = Avenger.objects.all()
-
-            context = {
-                'avenger_list': avenger_list,
-            }
-            return render(request, 'avengers/index.html', context)
-
-        avenger_list = Avenger.objects.all()
-
-        context = {
-            'avenger_list': avenger_list,
-        }
-        return render(request, 'avengers/index.html', context)
-
-
+# def create(request):
+#
+#     if request.method == 'POST':
+#         form = AvengerForm(request.POST)
+#
+#         if form.is_valid():
+#             avenger = form.save(commit=False)
+#             avenger.save()
+#             # avenger_list = Avenger.objects.all()
+#             #
+#             # context = {
+#             #     'avenger_list': avenger_list,
+#             # }
+#             return redirect('avengers/detail.html', {'avenger': avenger})
+#
+#     else:
+#         avenger_list = Avenger.objects.all()
+#
+#         context = {
+#             'avenger_list': avenger_list,
+#         }
+#         return render(request, 'avengers/index.html', context)
 
 
 # class IndexView(generic.ListView):

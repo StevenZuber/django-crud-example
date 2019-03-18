@@ -1,0 +1,9 @@
+{% extends 'avengers/index.html' %}
+
+{% block content %}
+    <h2>New Avenger</h2>
+    <form method="POST" >{% csrf_token %}
+        {{ form.avenger }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
