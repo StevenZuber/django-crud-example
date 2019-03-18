@@ -5,12 +5,14 @@ from .forms import AvengerForm
 
 def index(request):
 
-    if request.method == 'GET':
-        avenger_list = Avenger.objects.all()
+    # if request.method == 'GET':
+    #     avenger_list = Avenger.objects.all()
+    #
+    #     context = {
+    #         'avenger_list': avenger_list,
+    #     }
 
-        context = {
-            'avenger_list': avenger_list,
-        }
+    # allows user to add to the roster without having to load a separate page
     if request.method == 'POST':
         form = AvengerForm(request.POST)
 
@@ -19,11 +21,11 @@ def index(request):
             avenger.save()
 
             avenger_list = Avenger.objects.all()
-            context = {
+            new_context = {
                 'avenger_list': avenger_list,
             }
 
-            return render(request, 'avengers/index.html', context)
+            return render(request, 'avengers/index.html', new_context)
 
     else:
         avenger_list = Avenger.objects.all()
@@ -33,8 +35,7 @@ def index(request):
         }
         return render(request, 'avengers/index.html', context)
 
-    return render(request, 'avengers/index.html', context)
-
+    # return render(request, 'avengers/index.html', context)
 
 
 def detail(request, avenger_name):
@@ -54,10 +55,10 @@ def delete(request, id):
         avenger.delete()
         avenger_list = Avenger.objects.all()
 
-        context = {
+        new_context = {
             'avenger_list': avenger_list,
         }
-        return render(request, 'avengers/index.html', context)
+        return redirect('/avengers/')
 
     avenger_list = Avenger.objects.all()
 
@@ -94,22 +95,3 @@ def update(request, id):
 #         }
 #         return render(request, 'avengers/index.html', context)
 
-
-# class IndexView(generic.ListView):
-#     template_name = 'avengers/index.html'
-#
-#     context_object_name = 'avenger_list'
-#
-#     def get_queryset(self):
-#         return Avenger.objects.all()
-#
-# class DetailView(generic.DetailView):
-#     model = Avenger
-#
-#     template_name = 'avengers/detail.html'
-#
-# class DeleteView(generic.DeleteView):
-#     model = Avenger
-#
-#     template_name = 'avengers/index.html'
-#
