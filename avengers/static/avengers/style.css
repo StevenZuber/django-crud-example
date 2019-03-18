@@ -27,4 +27,11 @@ div.content{
   background-color: #0000ff;
   color: white;
 }
+#details {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+#detailsHeader {
+  background-color: #0000ff;
+}
 

@@ -1,8 +1,9 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'avengers/style.css' %}" />
+<div class="content" id="details">
 
-<h1>{{ avenger.avenger_name }}</h1>
+<h1 id="detailsHeader">{{ avenger.avenger_name }}</h1>
 <p>Was added on {{ avenger.add_date }}</p>
 <h2>{{ avenger.avenger_name }} has {{ avenger.referrals }} referrals!</h2>
 <br>
@@ -17,3 +18,4 @@
 {% endblock %}
 
 <a href="{% url 'avengers:index' %}">Back to the Bunker!</a>
+</div>
