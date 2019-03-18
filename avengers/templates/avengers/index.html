@@ -4,8 +4,9 @@
 <div class="content">
 <h1>Welcome to the Avengers Bunker!</h1>
 <br>
-<form method="post"><h4>Add New Avenger to the roster?</h4>
-  <input type="text" name="avenger_name">
+<form method="POST" ><h4>Add New Avenger to the roster?</h4>
+    {% csrf_token %}
+  <input type="text" name="create">
     <input type="submit" value="Add" />
 </form>
 
@@ -27,7 +28,7 @@
         <td>{{ avenger.avenger_name }}</td>
         <td>{{ avenger.referrals }}</td>
         <td><a href="{% url 'avengers:detail' avenger.avenger_name %}">Edit</a></td>
-        <td><form method="delete" action="{% url 'avengers:delete' avenger.id %}"><input type="submit" value="Delete"></form></td>
+        <td><form method="POST" action="{% url 'avengers:delete' avenger.id %}">{% csrf_token %}<input type="submit" value="Delete"></form></td>
     </tr>
     {% endfor %}
     </tbody>
@@ -36,4 +37,3 @@
 <p>No Avengers available. Thanos must have won. :(</p>
 {% endif %}
 </div>
-<form method="POST"><input type="button" value="Delete"></form>

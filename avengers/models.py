@@ -1,12 +1,12 @@
 from django.db import models
-
-# Create your models here.
+from django.template.defaultfilters import slugify
 from django.urls import reverse
 
 
 class Avenger(models.Model):
 
     avenger_name = models.CharField(max_length=50)
+    slug = models.SlugField(blank=True)
 
     add_date = models.DateTimeField(auto_now_add=True)
 
@@ -16,5 +16,21 @@ class Avenger(models.Model):
     def __str__(self):
         return self.avenger_name
 
+    def get_index_url(self):
+        return ('avengers:index', [self.slug])
+
     def get_absolute_url(self):
-        return reverse('avengers:detail', kwargs={'pk': self.pk})
+        return ('avengers:index', [self.slug])
+
+    def get_update_url(self):
+        return ('avengers:update', [self.slug])
+
+    def get_delete_url(self):
+        return ('avengers:delete', [self.slug])
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.avenger_name)
+        super().save(*args, **kwargs)
+
+
+
