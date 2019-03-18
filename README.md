@@ -1,6 +1,6 @@
-#Python CRUD Application with Django 
+# Python CRUD Application with Django 
 
-##Description
+## Description
 
 - This application was developed for a coding challenge, which only specified that it be a full
 CRUD application written in Python using the Django framework. From the landing page, the user 
@@ -12,7 +12,7 @@ should also be able to update and delete each Avenger in the list.
 basic CSS
 
 
-##Resources Used
+## Resources Used
 I leaned heavily on the tutorial videos from Derek Banas on Youtube to get my head around
 what I was doing with setting up a Django project.
 https://www.youtube.com/playlist?list=PLGLfVvz_LVvSMqZiTTsAC7C8Ypp81Jt6D
@@ -20,7 +20,7 @@ https://www.youtube.com/playlist?list=PLGLfVvz_LVvSMqZiTTsAC7C8Ypp81Jt6D
 I also looked at the resource Django Girls to complete working on the update/add functionality. 
 https://tutorial.djangogirls.org/en/django_forms/
 
-##Running the Application Locally
+## Running the Application Locally
 
 Make sure you have the latest version of Django installed
 
@@ -33,6 +33,6 @@ Then run the server:
 
     ./manage.py runserver
 
-##Heroku
+## Heroku
 
 
