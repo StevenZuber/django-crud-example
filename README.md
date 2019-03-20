@@ -8,7 +8,7 @@ should be able to see the list of items (I went with an Avengers theme because I
 Marvel last weekend) and include a details page that is pathed to using the field name. The user
 should also be able to update and delete each Avenger in the list.
 
-- This is a full stack application, but the front end is fairly simple, with no JavaScript and only basic CSS
+- This is a full stack application, but the front end is fairly simple, with no JavaScript and only basic CSS.
 
 
 ## Resources Used
@@ -32,6 +32,8 @@ Create the database:
 Then run the server:
 
     python3 manage.py runserver
+
+
 
 ## Heroku
 
