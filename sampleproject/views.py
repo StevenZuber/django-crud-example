@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import redirect
 
 def root_page(request):
-    return HttpResponse("Welcome to the Root Homepage!")
+    return redirect('/avengers/')
